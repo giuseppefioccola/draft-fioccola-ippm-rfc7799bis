@@ -8,6 +8,7 @@ This is the working area for the individual Internet-Draft, "RFC7799bis".
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-fioccola-ippm-rfc7799bis)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-fioccola-ippm-rfc7799bis)
 * [Compare Editor's Copy to Individual Draft](https://giuseppefioccola.github.io/draft-fioccola-ippm-rfc7799bis/#go.draft-fioccola-ippm-rfc7799bis.diff)
+* [Compare Editor's Copye to RFC 7799](https://author-tools.ietf.org/api/iddiff?doc_1=rfc7799&url_2=https://giuseppefioccola.github.io/draft-fioccola-ippm-rfc7799bis/draft-fioccola-ippm-rfc7799bis.txt)
 
 
 ## Contributing
