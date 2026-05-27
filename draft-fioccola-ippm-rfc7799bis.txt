@@ -9,7 +9,7 @@ Intended status: Best Current Practice                         AT&T Labs
 Expires: 28 November 2026                                    27 May 2026
 
 
- Active and Passive Metrics and Methods (with Hybrid Types In-Between)
+            Active, Passive, and Hybrid Metrics and Methods
                  draft-fioccola-ippm-rfc7799bis-latest
 
 Abstract
@@ -734,7 +734,9 @@ Appendix A.  Changes Since RFC 7799
 
    The main changes since [RFC799] are as follows:
 
-   *  Change the intended status
+   *  Changed the intended status from Informational to BCP
+
+   *  Updated title to reflect the current status of all methods
 
    *  Update the discussion section
 
