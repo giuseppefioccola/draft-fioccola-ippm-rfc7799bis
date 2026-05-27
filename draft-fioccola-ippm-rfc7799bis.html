@@ -4,16 +4,17 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>Active, Passive and Hybrid Metrics and Methods</title>
+<title>Active and Passive Metrics and Methods (with Hybrid Types In-Between)</title>
 <meta content="Giuseppe Fioccola" name="author">
 <meta content="Al Morton" name="author">
 <meta content='
-       This memo obsoletes RFC 7799 to provide clear definitions for Active,
-Passive and Hybrid performance assessment. The description of Metrics
-and Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
-to RFC 7799. While the discussion about the existing methods has been
-updated. This memo also describes multiple dimensions to help evaluate
-new methods as they emerge. 
+       This memo provides clear definitions for Active and Passive
+   performance assessment.  The construction of Metrics and Methods can
+   be described as either "Active" or "Passive".  Some methods may use a
+   subset of both Active and Passive attributes, and we refer to these
+   as "Hybrid Methods".  This memo also describes multiple dimensions to
+   help evaluate new methods as they emerge. 
+       This memo obsoletes RFC 7799. 
     ' name="description">
 <meta content="xml2rfc 3.33.0" name="generator">
 <meta content="active" name="keyword">
@@ -1052,7 +1053,7 @@ svg {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">Active, Passive and Hybrid</td>
+<td class="center">Active, Passive, and Hybrid</td>
 <td class="right">May 2026</td>
 </tr></thead>
 <tfoot><tr>
@@ -1076,7 +1077,7 @@ svg {
 <time datetime="2026-05-27" class="published">27 May 2026</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
-<dd class="intended-status">Informational</dd>
+<dd class="intended-status">Best Current Practice</dd>
 <dt class="label-expires">Expires:</dt>
 <dd class="expires"><time datetime="2026-11-28">28 November 2026</time></dd>
 <dt class="label-authors">Authors:</dt>
@@ -1092,15 +1093,16 @@ svg {
 </dd>
 </dl>
 </div>
-<h1 id="title">Active, Passive and Hybrid Metrics and Methods</h1>
+<h1 id="title">Active and Passive Metrics and Methods (with Hybrid Types In-Between)</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">This memo obsoletes RFC 7799 to provide clear definitions for Active,
-Passive and Hybrid performance assessment. The description of Metrics
-and Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
-to RFC 7799. While the discussion about the existing methods has been
-updated. This memo also describes multiple dimensions to help evaluate
-new methods as they emerge.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">This memo provides clear definitions for Active and Passive
+   performance assessment.  The construction of Metrics and Methods can
+   be described as either "Active" or "Passive".  Some methods may use a
+   subset of both Active and Passive attributes, and we refer to these
+   as "Hybrid Methods".  This memo also describes multiple dimensions to
+   help evaluate new methods as they emerge.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-2">This memo obsoletes RFC 7799.<a href="#section-abstract-2" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-about-this-document">
@@ -1213,7 +1215,7 @@ new methods as they emerge.<a href="#section-abstract-1" class="pilcrow">¶</a><
             <p id="section-toc.1-1.5.1"><a href="#section-5" class="auto internal xref">5</a>.  <a href="#name-examples" class="internal xref">Examples</a></p>
 <ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.1">
-                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-owamp-twamp-and-stamp" class="internal xref">OWAMP, TWAMP and STAMP</a></p>
+                <p id="section-toc.1-1.5.2.1.1"><a href="#section-5.1" class="auto internal xref">5.1</a>.  <a href="#name-owamp-twamp-and-stamp" class="internal xref">OWAMP, TWAMP, and STAMP</a></p>
 </li>
               <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.5.2.2">
                 <p id="section-toc.1-1.5.2.2.1"><a href="#section-5.2" class="auto internal xref">5.2</a>.  <a href="#name-alternate-marking" class="internal xref">Alternate-Marking</a></p>
@@ -1230,27 +1232,33 @@ new methods as they emerge.<a href="#section-abstract-1" class="pilcrow">¶</a><
             <p id="section-toc.1-1.6.1"><a href="#section-6" class="auto internal xref">6</a>.  <a href="#name-discussion-of-oam-methods" class="internal xref">Discussion of OAM Methods</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.7">
-            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
+            <p id="section-toc.1-1.7.1"><a href="#section-7" class="auto internal xref">7</a>.  <a href="#name-operational-considerations" class="internal xref">Operational Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.8">
-            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
+            <p id="section-toc.1-1.8.1"><a href="#section-8" class="auto internal xref">8</a>.  <a href="#name-security-considerations" class="internal xref">Security Considerations</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9">
-            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-references" class="internal xref">References</a></p>
-<ul class="compact toc ulBare ulEmpty">
-<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9.2.1">
-                <p id="section-toc.1-1.9.2.1.1"><a href="#section-9.1" class="auto internal xref">9.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+            <p id="section-toc.1-1.9.1"><a href="#section-9" class="auto internal xref">9</a>.  <a href="#name-iana-considerations" class="internal xref">IANA Considerations</a></p>
 </li>
-              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.9.2.2">
-                <p id="section-toc.1-1.9.2.2.1"><a href="#section-9.2" class="auto internal xref">9.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
+            <p id="section-toc.1-1.10.1"><a href="#section-10" class="auto internal xref">10</a>. <a href="#name-references" class="internal xref">References</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10.2.1">
+                <p id="section-toc.1-1.10.2.1.1"><a href="#section-10.1" class="auto internal xref">10.1</a>.  <a href="#name-normative-references" class="internal xref">Normative References</a></p>
+</li>
+              <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10.2.2">
+                <p id="section-toc.1-1.10.2.2.1"><a href="#section-10.2" class="auto internal xref">10.2</a>.  <a href="#name-informative-references" class="internal xref">Informative References</a></p>
 </li>
             </ul>
 </li>
-          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.10">
-            <p id="section-toc.1-1.10.1"><a href="#appendix-A" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
-</li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.11">
-            <p id="section-toc.1-1.11.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
+            <p id="section-toc.1-1.11.1"><a href="#appendix-A" class="auto internal xref">Appendix A</a>.  <a href="#name-changes-since-rfc-7799" class="internal xref">Changes Since RFC 7799</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.12">
+            <p id="section-toc.1-1.12.1"><a href="#appendix-B" class="auto internal xref"></a><a href="#name-acknowledgments" class="internal xref">Acknowledgments</a></p>
+</li>
+          <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.13">
+            <p id="section-toc.1-1.13.1"><a href="#appendix-C" class="auto internal xref"></a><a href="#name-authors-addresses" class="internal xref">Authors' Addresses</a></p>
 </li>
         </ul>
 </nav>
@@ -1267,7 +1275,7 @@ assessment. The first Passive and Active Measurement (PAM)
 Conference was held in 2000, but the earliest proceedings available
 online are from the second PAM conference in 2001
 (https://www.ripe.net/ripe/meetings/pam-2001).<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">The notions of "Active", "Passive" and "Hybrid" are well-established.
+<p id="section-1-2">The notions of "Active", "Passive", and "Hybrid" are well-established.
 In general:<a href="#section-1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="section-1-3.1">
@@ -1295,6 +1303,15 @@ Methods based on long usage in the Internet measurement community,
 and especially the Internet Engineering Task Force (IETF). This memo
 also describes the combination of fundamental Active and Passive
 categories that are called Hybrid Methods and Metrics.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-6">The classification guidelines set in <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> are used as a
+reference to position measurement methods and establish a structured approach
+to capture measurement method characteristics. Typically, a measurement method
+is first presented by indicating whether it belongs to Active/Passive/Hybrid
+category defined in <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>.<a href="#section-1-6" class="pilcrow">¶</a></p>
+<p id="section-1-7">This memo obsoletes <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>. The description of Metrics
+and Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
+to <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>, while the discussion about the existing methods has been
+updated. Main changes are listed in <a href="#sec-changes" class="auto internal xref">Appendix A</a>.<a href="#section-1-7" class="pilcrow">¶</a></p>
 <div id="conventions-and-definitions">
 <section id="section-1.1">
         <h3 id="name-conventions-and-definitions">
@@ -1360,11 +1377,11 @@ Measured Value or Measurement Result.<a href="#section-3.2-1" class="pilcrow">¶
         <h3 id="name-observation-point">
 <a href="#section-3.3" class="section-number selfRef">3.3. </a><a href="#name-observation-point" class="section-name selfRef">Observation Point</a>
         </h3>
-<p id="section-3.3-1">See Section 2 of <span>[<a href="#RFC7011" class="cite xref">RFC7011</a>]</span> for the definition of Observation Point (a
+<p id="section-3.3-1">See <span><a href="https://rfc-editor.org/rfc/rfc7011#section-2" class="relref">Section 2</a> of [<a href="#RFC7011" class="cite xref">RFC7011</a>]</span> for the definition of Observation Point (a
 location in the network where packets can be observed), and related
 definitions. The comparable term defined in IETF literature on
-Active measurement is "Measurement Point" (see Section 4.1 of
-<span>[<a href="#RFC5835" class="cite xref">RFC5835</a>]</span>). Both of these terms have come into use describing
+Active measurement is "Measurement Point" (see <span><a href="https://rfc-editor.org/rfc/rfc5835#section-4.1" class="relref">Section 4.1</a> of [<a href="#RFC5835" class="cite xref">RFC5835</a>]</span>).
+Both of these terms have come into use describing
 similar actions at the identified point in the network path.<a href="#section-3.3-1" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1523,7 +1540,7 @@ aspect of Active Methods, the stream of interest is not "solely
 observed", and the measurements involve a single stream of interest
 whose treatment has been modified by the presence of the load.
 Therefore, this is a Hybrid Type I method.<a href="#section-3.8-5" class="pilcrow">¶</a></p>
-<p id="section-3.8-6">We define Hybrid Type II as follows: Methods that employ two or more
+<p id="section-3.8-6">Hybrid Type II is defined as follows: Methods that employ two or more
 different streams of interest with some degree of mutual coordination
 (e.g., one or more Active streams and one or more undisturbed and
 unmodified packet streams) to collect both Active and Passive Metrics
@@ -1562,8 +1579,8 @@ Multiple Methods    | Spatial Metrics        | Hybrid Type II
 can be considered equivalent to those measured with Passive Methods.
 This notion references the possibility of a "class C" where packets
 of different Type-P are treated equally in network implementation, as
-described in Section 13 of <span>[<a href="#RFC2330" class="cite xref">RFC2330</a>]</span> and using the terminology for
-paths from Section 5 of <span>[<a href="#RFC2330" class="cite xref">RFC2330</a>]</span>:<a href="#section-3.8-10" class="pilcrow">¶</a></p>
+described in <span><a href="https://rfc-editor.org/rfc/rfc2330#section-13" class="relref">Section 13</a> of [<a href="#RFC2330" class="cite xref">RFC2330</a>]</span> and using the terminology for
+paths from <span><a href="https://rfc-editor.org/rfc/rfc2330#section-5" class="relref">Section 5</a> of [<a href="#RFC2330" class="cite xref">RFC2330</a>]</span>:<a href="#section-3.8-10" class="pilcrow">¶</a></p>
 <ul class="normal ulEmpty">
 <li class="normal ulEmpty" id="section-3.8-11.1">
             <p id="section-3.8-11.1.1">Hybrid Methods of measurement that augment or modify packets of a
@@ -1709,7 +1726,7 @@ Passive Method discussed above.<a href="#section-4-11" class="pilcrow">¶</a></p
 <div id="owamp-twamp-and-stamp">
 <section id="section-5.1">
         <h3 id="name-owamp-twamp-and-stamp">
-<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-owamp-twamp-and-stamp" class="section-name selfRef">OWAMP, TWAMP and STAMP</a>
+<a href="#section-5.1" class="section-number selfRef">5.1. </a><a href="#name-owamp-twamp-and-stamp" class="section-name selfRef">OWAMP, TWAMP, and STAMP</a>
         </h3>
 <p id="section-5.1-1">One-Way Active Measurement Protocol (OWAMP) <span>[<a href="#RFC4656" class="cite xref">RFC4656</a>]</span>, Two-Way
 Active Measurement Protocol (TWAMP) <span>[<a href="#RFC5357" class="cite xref">RFC5357</a>]</span>, Simple Two-way
@@ -1719,7 +1736,7 @@ performance, such as packet loss, delay, and jitter. These protocols
 allow the calculation of these metrics by actively sending test packets
 between two endpoints.<a href="#section-5.1-1" class="pilcrow">¶</a></p>
 <p id="section-5.1-2">Since "the stream of interest is generated as the basis of
-measurement", we conclude that OWAMP, TWAMP and STAMP can be classified
+measurement", OWAMP, TWAMP and STAMP can be classified
 as Active Methods.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1728,8 +1745,8 @@ as Active Methods.<a href="#section-5.1-2" class="pilcrow">¶</a></p>
         <h3 id="name-alternate-marking">
 <a href="#section-5.2" class="section-number selfRef">5.2. </a><a href="#name-alternate-marking" class="section-name selfRef">Alternate-Marking</a>
         </h3>
-<p id="section-5.2-1"><span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span> proposes a performance monitoring technique, called
-Alternate-Marking, consists of marking the packets in order to divide
+<p id="section-5.2-1"><span>[<a href="#RFC9341" class="cite xref">RFC9341</a>]</span> defines a performance monitoring technique, called
+Alternate-Marking, that consists of marking the packets in order to divide
 the packet flow into batches, that are used to get coherent counters
 and timestamps in every marking period to measure the performance. It
 can be implemented by using reserved bits in the protocol header, and
@@ -1750,7 +1767,7 @@ processed to add the marking in the header, and the stream could
 be measured and time-stamped during that process.<a href="#section-5.2-3.2.1" class="pilcrow">¶</a></p>
 </li>
         </ul>
-<p id="section-5.2-4">We conclude that this is a Hybrid Type I method, having at least one
+<p id="section-5.2-4">Alternate-Marking is a Hybrid Type I method, having at least one
 characteristic of both Active and Passive Methods for a single stream
 of interest.<a href="#section-5.2-4" class="pilcrow">¶</a></p>
 </section>
@@ -1770,7 +1787,7 @@ packets specifically dedicated to OAM.<a href="#section-5.3-1" class="pilcrow">�
 values which are dedicated to measurement". Similarly to
 Alternate-Marking, IOAM also intends to have a minor effect in the
 network and the measured stream has unknown characteristics until it is
-processed. We conclude that IOAM can be portrayed as Hybrid Type I.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
+processed. IOAM can thus be portrayed as Hybrid Type I.<a href="#section-5.3-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="pdm">
@@ -1787,7 +1804,7 @@ in the title of this option). PDM also intends to have a minor effect
 in the network and the measured stream has unknown characteristics
 until it is processed. Note that if the packet MTU is exceeded after
 adding the header, the intent to have a minor effect will not be
-realized. We conclude that this is a Hybrid Type I method, having at
+realized. PDM is classified as a Hybrid Type I method, having at
 least one characteristic of both Active and Passive Methods for a
 single stream of interest.<a href="#section-5.4-2" class="pilcrow">¶</a></p>
 </section>
@@ -1808,7 +1825,7 @@ measurement methods that we would classify as follows:<a href="#section-6-2" cla
 <ul class="normal">
 <li class="normal" id="section-6-3.1">
           <p id="section-6-3.1.1">Loss Measurement (LM) occasionally injects frames with a count of
-previous frames since the last LM message. We conclude LM is
+previous frames since the last LM message. Therefore, LM is classified as
 Hybrid Type I, because this method processes a user traffic stream
 and augments the stream of interest with frames having "fields
 which are dedicated to measurement".<a href="#section-6-3.1.1" class="pilcrow">¶</a></p>
@@ -1816,47 +1833,55 @@ which are dedicated to measurement".<a href="#section-6-3.1.1" class="pilcrow">�
         <li class="normal" id="section-6-3.2">
           <p id="section-6-3.2.1">Synthetic Loss Measurement (SLM) and Delay Measurement (DM)
 methods both inject dedicated measurement frames, so the "stream
-of interest is generated as the basis of measurement". We
-conclude that SLM and DM methods are Active Methods.<a href="#section-6-3.2.1" class="pilcrow">¶</a></p>
+of interest is generated as the basis of measurement". Thus,
+SLM and DM methods are classified as Active Methods.<a href="#section-6-3.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-6-4">We also recognize the existence of alternate terminology used in OAM
-at layers other than IP. Readers are encouraged to consult <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>
+<p id="section-6-4">There are other alternate terminology used in OAM
+at layers other than IP. Readers may refer to <span>[<a href="#RFC6374" class="cite xref">RFC6374</a>]</span>
 for MPLS Loss and Delay measurement terminology, for example.<a href="#section-6-4" class="pilcrow">¶</a></p>
 </section>
 </div>
-<div id="security-considerations">
+<div id="operational-considerations">
 <section id="section-7">
-      <h2 id="name-security-considerations">
-<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      <h2 id="name-operational-considerations">
+<a href="#section-7" class="section-number selfRef">7. </a><a href="#name-operational-considerations" class="section-name selfRef">Operational Considerations</a>
       </h2>
-<p id="section-7-1">When considering the security and privacy of those involved in
+<p id="section-7-1">TBC.<a href="#section-7-1" class="pilcrow">¶</a></p>
+</section>
+</div>
+<div id="security-considerations">
+<section id="section-8">
+      <h2 id="name-security-considerations">
+<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
+      </h2>
+<p id="section-8-1">When considering the security and privacy of those involved in
 measurement or those whose traffic is measured, there is sensitive
 information communicated and observed at observation and measurement
 points described above, and protocol issues to consider. We refer
 the reader to the security and privacy considerations described in
 the Large-Scale Measurement of Broadband Performance (LMAP) Framework
 <span>[<a href="#RFC7594" class="cite xref">RFC7594</a>]</span>, which covers Active and Passive measurement techniques and
-supporting material on measurement context.<a href="#section-7-1" class="pilcrow">¶</a></p>
+supporting material on measurement context.<a href="#section-8-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="iana-considerations">
-<section id="section-8">
+<section id="section-9">
       <h2 id="name-iana-considerations">
-<a href="#section-8" class="section-number selfRef">8. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
+<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-iana-considerations" class="section-name selfRef">IANA Considerations</a>
       </h2>
-<p id="section-8-1">This document has no IANA actions.<a href="#section-8-1" class="pilcrow">¶</a></p>
+<p id="section-9-1">This document has no IANA actions.<a href="#section-9-1" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="sec-combined-references">
-<section id="section-9">
+<section id="section-10">
       <h2 id="name-references">
-<a href="#section-9" class="section-number selfRef">9. </a><a href="#name-references" class="section-name selfRef">References</a>
+<a href="#section-10" class="section-number selfRef">10. </a><a href="#name-references" class="section-name selfRef">References</a>
       </h2>
 <div id="sec-normative-references">
-<section id="section-9.1">
+<section id="section-10.1">
         <h3 id="name-normative-references">
-<a href="#section-9.1" class="section-number selfRef">9.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
+<a href="#section-10.1" class="section-number selfRef">10.1. </a><a href="#name-normative-references" class="section-name selfRef">Normative References</a>
         </h3>
 <dl class="references">
 <dt id="RFC2119">[RFC2119]</dt>
@@ -1871,14 +1896,6 @@ supporting material on measurement context.<a href="#section-7-1" class="pilcrow
         <dd>
 <span class="refAuthor">Raisanen, V.</span>, <span class="refAuthor">Grotefeld, G.</span>, and <span class="refAuthor">A. Morton</span>, <span class="refTitle">"Network performance measurement with periodic streams"</span>, <span class="seriesInfo">RFC 3432</span>, <span class="seriesInfo">DOI 10.17487/RFC3432</span>, <time datetime="2002-12" class="refDate">December 2002</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc3432">https://www.rfc-editor.org/rfc/rfc3432</a>&gt;</span>. </dd>
 <dd class="break"></dd>
-<dt id="RFC4656">[RFC4656]</dt>
-        <dd>
-<span class="refAuthor">Shalunov, S.</span>, <span class="refAuthor">Teitelbaum, B.</span>, <span class="refAuthor">Karp, A.</span>, <span class="refAuthor">Boote, J.</span>, and <span class="refAuthor">M. Zekauskas</span>, <span class="refTitle">"A One-way Active Measurement Protocol (OWAMP)"</span>, <span class="seriesInfo">RFC 4656</span>, <span class="seriesInfo">DOI 10.17487/RFC4656</span>, <time datetime="2006-09" class="refDate">September 2006</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4656">https://www.rfc-editor.org/rfc/rfc4656</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC5357">[RFC5357]</dt>
-        <dd>
-<span class="refAuthor">Hedayat, K.</span>, <span class="refAuthor">Krzanowski, R.</span>, <span class="refAuthor">Morton, A.</span>, <span class="refAuthor">Yum, K.</span>, and <span class="refAuthor">J. Babiarz</span>, <span class="refTitle">"A Two-Way Active Measurement Protocol (TWAMP)"</span>, <span class="seriesInfo">RFC 5357</span>, <span class="seriesInfo">DOI 10.17487/RFC5357</span>, <time datetime="2008-10" class="refDate">October 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5357">https://www.rfc-editor.org/rfc/rfc5357</a>&gt;</span>. </dd>
-<dd class="break"></dd>
 <dt id="RFC5644">[RFC5644]</dt>
         <dd>
 <span class="refAuthor">Stephan, E.</span>, <span class="refAuthor">Liang, L.</span>, and <span class="refAuthor">A. Morton</span>, <span class="refTitle">"IP Performance Metrics (IPPM): Spatial and Multicast"</span>, <span class="seriesInfo">RFC 5644</span>, <span class="seriesInfo">DOI 10.17487/RFC5644</span>, <time datetime="2009-10" class="refDate">October 2009</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5644">https://www.rfc-editor.org/rfc/rfc5644</a>&gt;</span>. </dd>
@@ -1886,10 +1903,6 @@ supporting material on measurement context.<a href="#section-7-1" class="pilcrow
 <dt id="RFC5835">[RFC5835]</dt>
         <dd>
 <span class="refAuthor">Morton, A., Ed.</span> and <span class="refAuthor">S. Van den Berghe, Ed.</span>, <span class="refTitle">"Framework for Metric Composition"</span>, <span class="seriesInfo">RFC 5835</span>, <span class="seriesInfo">DOI 10.17487/RFC5835</span>, <time datetime="2010-04" class="refDate">April 2010</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5835">https://www.rfc-editor.org/rfc/rfc5835</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-<dt id="RFC6374">[RFC6374]</dt>
-        <dd>
-<span class="refAuthor">Frost, D.</span> and <span class="refAuthor">S. Bryant</span>, <span class="refTitle">"Packet Loss and Delay Measurement for MPLS Networks"</span>, <span class="seriesInfo">RFC 6374</span>, <span class="seriesInfo">DOI 10.17487/RFC6374</span>, <time datetime="2011-09" class="refDate">September 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6374">https://www.rfc-editor.org/rfc/rfc6374</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC6390">[RFC6390]</dt>
         <dd>
@@ -1912,8 +1925,37 @@ supporting material on measurement context.<a href="#section-7-1" class="pilcrow
 <span class="refAuthor">Morton, A.</span>, <span class="refTitle">"Active and Passive Metrics and Methods (with Hybrid Types In-Between)"</span>, <span class="seriesInfo">RFC 7799</span>, <span class="seriesInfo">DOI 10.17487/RFC7799</span>, <time datetime="2016-05" class="refDate">May 2016</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc7799">https://www.rfc-editor.org/rfc/rfc7799</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8174">[RFC8174]</dt>
-        <dd>
+      <dd>
 <span class="refAuthor">Leiba, B.</span>, <span class="refTitle">"Ambiguity of Uppercase vs Lowercase in RFC 2119 Key Words"</span>, <span class="seriesInfo">BCP 14</span>, <span class="seriesInfo">RFC 8174</span>, <span class="seriesInfo">DOI 10.17487/RFC8174</span>, <time datetime="2017-05" class="refDate">May 2017</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc8174">https://www.rfc-editor.org/rfc/rfc8174</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+</dl>
+</section>
+</div>
+<div id="sec-informative-references">
+<section id="section-10.2">
+        <h3 id="name-informative-references">
+<a href="#section-10.2" class="section-number selfRef">10.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
+        </h3>
+<dl class="references">
+<dt id="OAM">[OAM]</dt>
+        <dd>
+<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing the Term "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-17</span>, <time datetime="2026-01-28" class="refDate">28 January 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-17">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-17</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC4656">[RFC4656]</dt>
+        <dd>
+<span class="refAuthor">Shalunov, S.</span>, <span class="refAuthor">Teitelbaum, B.</span>, <span class="refAuthor">Karp, A.</span>, <span class="refAuthor">Boote, J.</span>, and <span class="refAuthor">M. Zekauskas</span>, <span class="refTitle">"A One-way Active Measurement Protocol (OWAMP)"</span>, <span class="seriesInfo">RFC 4656</span>, <span class="seriesInfo">DOI 10.17487/RFC4656</span>, <time datetime="2006-09" class="refDate">September 2006</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc4656">https://www.rfc-editor.org/rfc/rfc4656</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC5357">[RFC5357]</dt>
+        <dd>
+<span class="refAuthor">Hedayat, K.</span>, <span class="refAuthor">Krzanowski, R.</span>, <span class="refAuthor">Morton, A.</span>, <span class="refAuthor">Yum, K.</span>, and <span class="refAuthor">J. Babiarz</span>, <span class="refTitle">"A Two-Way Active Measurement Protocol (TWAMP)"</span>, <span class="seriesInfo">RFC 5357</span>, <span class="seriesInfo">DOI 10.17487/RFC5357</span>, <time datetime="2008-10" class="refDate">October 2008</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc5357">https://www.rfc-editor.org/rfc/rfc5357</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC6374">[RFC6374]</dt>
+        <dd>
+<span class="refAuthor">Frost, D.</span> and <span class="refAuthor">S. Bryant</span>, <span class="refTitle">"Packet Loss and Delay Measurement for MPLS Networks"</span>, <span class="seriesInfo">RFC 6374</span>, <span class="seriesInfo">DOI 10.17487/RFC6374</span>, <time datetime="2011-09" class="refDate">September 2011</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc6374">https://www.rfc-editor.org/rfc/rfc6374</a>&gt;</span>. </dd>
+<dd class="break"></dd>
+<dt id="RFC799">[RFC799]</dt>
+        <dd>
+<span class="refAuthor">Mills, D.</span>, <span class="refTitle">"Internet name domains"</span>, <span class="seriesInfo">RFC 799</span>, <span class="seriesInfo">DOI 10.17487/RFC0799</span>, <time datetime="1981-09" class="refDate">September 1981</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc799">https://www.rfc-editor.org/rfc/rfc799</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC8250">[RFC8250]</dt>
         <dd>
@@ -1932,21 +1974,8 @@ supporting material on measurement context.<a href="#section-7-1" class="pilcrow
 <span class="refAuthor">Brockners, F., Ed.</span>, <span class="refAuthor">Bhandari, S., Ed.</span>, and <span class="refAuthor">T. Mizrahi, Ed.</span>, <span class="refTitle">"Data Fields for In Situ Operations, Administration, and Maintenance (IOAM)"</span>, <span class="seriesInfo">RFC 9197</span>, <span class="seriesInfo">DOI 10.17487/RFC9197</span>, <time datetime="2022-05" class="refDate">May 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9197">https://www.rfc-editor.org/rfc/rfc9197</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="RFC9341">[RFC9341]</dt>
-      <dd>
-<span class="refAuthor">Fioccola, G., Ed.</span>, <span class="refAuthor">Cociglio, M.</span>, <span class="refAuthor">Mirsky, G.</span>, <span class="refAuthor">Mizrahi, T.</span>, and <span class="refAuthor">T. Zhou</span>, <span class="refTitle">"Alternate-Marking Method"</span>, <span class="seriesInfo">RFC 9341</span>, <span class="seriesInfo">DOI 10.17487/RFC9341</span>, <time datetime="2022-12" class="refDate">December 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9341">https://www.rfc-editor.org/rfc/rfc9341</a>&gt;</span>. </dd>
-<dd class="break"></dd>
-</dl>
-</section>
-</div>
-<div id="sec-informative-references">
-<section id="section-9.2">
-        <h3 id="name-informative-references">
-<a href="#section-9.2" class="section-number selfRef">9.2. </a><a href="#name-informative-references" class="section-name selfRef">Informative References</a>
-        </h3>
-<dl class="references">
-<dt id="OAM">[OAM]</dt>
         <dd>
-<span class="refAuthor">Pignataro, C.</span>, <span class="refAuthor">Farrel, A.</span>, and <span class="refAuthor">T. Mizrahi</span>, <span class="refTitle">"Guidelines for Characterizing the Term "OAM""</span>, <span class="refContent">Work in Progress</span>, <span class="seriesInfo">Internet-Draft, draft-ietf-opsawg-oam-characterization-17</span>, <time datetime="2026-01-28" class="refDate">28 January 2026</time>, <span>&lt;<a href="https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-17">https://datatracker.ietf.org/doc/html/draft-ietf-opsawg-oam-characterization-17</a>&gt;</span>. </dd>
+<span class="refAuthor">Fioccola, G., Ed.</span>, <span class="refAuthor">Cociglio, M.</span>, <span class="refAuthor">Mirsky, G.</span>, <span class="refAuthor">Mizrahi, T.</span>, and <span class="refAuthor">T. Zhou</span>, <span class="refTitle">"Alternate-Marking Method"</span>, <span class="seriesInfo">RFC 9341</span>, <span class="seriesInfo">DOI 10.17487/RFC9341</span>, <time datetime="2022-12" class="refDate">December 2022</time>, <span>&lt;<a href="https://www.rfc-editor.org/rfc/rfc9341">https://www.rfc-editor.org/rfc/rfc9341</a>&gt;</span>. </dd>
 <dd class="break"></dd>
 <dt id="Y.1540">[Y.1540]</dt>
         <dd>
@@ -1961,16 +1990,58 @@ supporting material on measurement context.<a href="#section-7-1" class="pilcrow
 </div>
 </section>
 </div>
-<div id="acknowledgments">
+<div id="sec-changes">
 <section id="appendix-A">
+      <h2 id="name-changes-since-rfc-7799">
+<a href="#appendix-A" class="section-number selfRef">Appendix A. </a><a href="#name-changes-since-rfc-7799" class="section-name selfRef">Changes Since RFC 7799</a>
+      </h2>
+<p id="appendix-A-1">The main changes since <span>[<a href="#RFC799" class="cite xref">RFC799</a>]</span> are as follows:<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-A-2.1">
+          <p id="appendix-A-2.1.1">Change the intended status<a href="#appendix-A-2.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-A-2.2">
+          <p id="appendix-A-2.2.1">Update the discussion section<a href="#appendix-A-2.2.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+</section>
+</div>
+<div id="acknowledgments">
+<section id="appendix-B">
       <h2 id="name-acknowledgments">
 <a href="#name-acknowledgments" class="section-name selfRef">Acknowledgments</a>
       </h2>
-<p id="appendix-A-1">Thanks to Al Morton for working on <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-B-1">Thanks to Al Morton for working on <span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span>.<a href="#appendix-B-1" class="pilcrow">¶</a></p>
+<p id="appendix-B-2">Acknowledgements from RFC 7799:
+Thanks to Mike Ackermann for asking the right question, and for
+several suggestions on terminology.  Brian Trammell provided key
+terms and references for the Passive category, and suggested ways to
+expand the Hybrid description and types.  Phil Eardley suggested some
+hybrid scenarios for categorization as part of his review.  Tiziano
+Ionta reviewed the document and suggested the classification for the
+"coloring" Method of Measurement.  Nalini Elkins identified several
+areas for clarification following her review.  Bill Jouris, Stenio
+Fernandes, and Spencer Dawkins suggested several editorial
+improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
+Ackermann raised many key considerations in their Working Group Last
+Call (WGLC) reviews, based on their broad measurement experience.<a href="#appendix-B-2" class="pilcrow">¶</a></p>
+<span class="break"></span><dl class="dlParallel" id="appendix-B-3">
+        <dt id="appendix-B-3.1">
+<span>[<a href="#RFC7799" class="cite xref">RFC7799</a>]</span> Author's:</dt>
+        <dd style="margin-left: 1.5em" id="appendix-B-3.2">
+          <p id="appendix-B-3.2.1">Al Morton<a href="#appendix-B-3.2.1" class="pilcrow">¶</a></p>
+</dd>
+        <dd class="break"></dd>
+<dt id="appendix-B-3.3"></dt>
+        <dd style="margin-left: 1.5em" id="appendix-B-3.4">
+          <p id="appendix-B-3.4.1">AT&amp;T Labs<a href="#appendix-B-3.4.1" class="pilcrow">¶</a></p>
+</dd>
+      <dd class="break"></dd>
+</dl>
 </section>
 </div>
 <div id="authors-addresses">
-<section id="appendix-B">
+<section id="appendix-C">
       <h2 id="name-authors-addresses">
 <a href="#name-authors-addresses" class="section-name selfRef">Authors' Addresses</a>
       </h2>
