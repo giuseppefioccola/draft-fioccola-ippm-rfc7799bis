@@ -1,7 +1,7 @@
 ---
-title: "Active, Passive and Hybrid Metrics and Methods"
-abbrev: "Active, Passive and Hybrid"
-category: info
+title: "Active and Passive Metrics and Methods (with Hybrid Types In-Between)"
+abbrev: "Active, Passive, and Hybrid"
+category: BCP
 
 docname: draft-fioccola-ippm-rfc7799bis-latest
 obsoletes: 7799
@@ -55,13 +55,14 @@ informative:
 
 --- abstract
 
-This memo obsoletes RFC 7799 to provide clear definitions for Active,
-Passive and Hybrid performance assessment. The description of Metrics
-and Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
-to RFC 7799. While the discussion about the existing methods has been
-updated. This memo also describes multiple dimensions to help evaluate
-new methods as they emerge.
+   This memo provides clear definitions for Active and Passive
+   performance assessment.  The construction of Metrics and Methods can
+   be described as either "Active" or "Passive".  Some methods may use a
+   subset of both Active and Passive attributes, and we refer to these
+   as "Hybrid Methods".  This memo also describes multiple dimensions to
+   help evaluate new methods as they emerge.
 
+   This memo obsoletes RFC 7799.
 
 --- middle
 
@@ -75,7 +76,7 @@ Conference was held in 2000, but the earliest proceedings available
 online are from the second PAM conference in 2001
 (https://www.ripe.net/ripe/meetings/pam-2001).
 
-The notions of "Active", "Passive" and "Hybrid" are well-established.
+The notions of "Active", "Passive", and "Hybrid" are well-established.
 In general:
 
 - An Active Metric or Method depends on a dedicated measurement
@@ -101,6 +102,17 @@ and especially the Internet Engineering Task Force (IETF). This memo
 also describes the combination of fundamental Active and Passive
 categories that are called Hybrid Methods and Metrics.
 
+The classification guidelines set in {{?RFC7799}} are used as a
+reference to position measurement methods and establish a structured approach
+to capture measurement method characteristics. Typically, a measurement method
+is first presented by indicating whether it belongs to Active/Passive/Hybrid
+category defined in {{?RFC7799}}.
+
+This memo obsoletes {{?RFC7799}}. The description of Metrics
+and Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
+to {{?RFC7799}}, while the discussion about the existing methods has been
+updated. Main changes are listed in {{sec-changes}}.
+
 ## Conventions and Definitions
 
 {::boilerplate bcp14-tagged}
@@ -118,7 +130,6 @@ combinations of their attributes as Hybrid Methods.
 
 Further, this memo's purpose includes describing multiple dimensions
 to evaluate new methods as they emerge.
-
 
 # Terms and Definitions
 
@@ -143,11 +154,11 @@ Measured Value or Measurement Result.
 
 ## Observation Point
 
-See Section 2 of {{!RFC7011}} for the definition of Observation Point (a
+See {{Section 2 of !RFC7011}} for the definition of Observation Point (a
 location in the network where packets can be observed), and related
 definitions. The comparable term defined in IETF literature on
-Active measurement is "Measurement Point" (see Section 4.1 of
-{{!RFC5835}}). Both of these terms have come into use describing
+Active measurement is "Measurement Point" (see {{Section 4.1 of !RFC5835}}).
+Both of these terms have come into use describing
 similar actions at the identified point in the network path.
 
 ## Active Methods
@@ -176,7 +187,7 @@ Active Methods of Measurement have the following attributes:
   the Source (at least), and may be communicated to the Destination
   as part of the method. Note that some packet characteristics will
   normally change during packet forwarding. Other changes along the
-  path are possible, see {{!RFC8468}}.
+  path are possible, see {{?RFC8468}}.
 
 When adding traffic to the network for measurement, Active Methods
 influence the quantities measured to some degree, and those
@@ -281,7 +292,7 @@ observed", and the measurements involve a single stream of interest
 whose treatment has been modified by the presence of the load.
 Therefore, this is a Hybrid Type I method.
 
-We define Hybrid Type II as follows: Methods that employ two or more
+Hybrid Type II is defined as follows: Methods that employ two or more
 different streams of interest with some degree of mutual coordination
 (e.g., one or more Active streams and one or more undisturbed and
 unmodified packet streams) to collect both Active and Passive Metrics
@@ -322,8 +333,8 @@ There may be circumstances where results measured with Hybrid Methods
 can be considered equivalent to those measured with Passive Methods.
 This notion references the possibility of a "class C" where packets
 of different Type-P are treated equally in network implementation, as
-described in Section 13 of {{!RFC2330}} and using the terminology for
-paths from Section 5 of {{!RFC2330}}:
+described in {{Section 13 of !RFC2330}} and using the terminology for
+paths from {{Section 5 of !RFC2330}}:
 
   > Hybrid Methods of measurement that augment or modify packets of a
   "class C" in a host should produce results equivalent to Passive
@@ -450,24 +461,24 @@ Passive Method discussed above.
 
 This section presents some examples.
 
-## OWAMP, TWAMP and STAMP
+## OWAMP, TWAMP, and STAMP
 
-One-Way Active Measurement Protocol (OWAMP) {{!RFC4656}}, Two-Way
-Active Measurement Protocol (TWAMP) {{!RFC5357}}, Simple Two-way
-Active Measurement Protocol (STAMP) {{!RFC8762}} are standardized
+One-Way Active Measurement Protocol (OWAMP) {{?RFC4656}}, Two-Way
+Active Measurement Protocol (TWAMP) {{?RFC5357}}, Simple Two-way
+Active Measurement Protocol (STAMP) {{?RFC8762}} are standardized
 networking protocols that enable the measurements of IP network
 performance, such as packet loss, delay, and jitter. These protocols
 allow the calculation of these metrics by actively sending test packets
 between two endpoints.
 
 Since "the stream of interest is generated as the basis of
-measurement", we conclude that OWAMP, TWAMP and STAMP can be classified
+measurement", OWAMP, TWAMP and STAMP can be classified
 as Active Methods.
 
 ## Alternate-Marking
 
-{{!RFC9341}} proposes a performance monitoring technique, called
-Alternate-Marking, consists of marking the packets in order to divide
+{{?RFC9341}} defines a performance monitoring technique, called
+Alternate-Marking, that consists of marking the packets in order to divide
 the packet flow into batches, that are used to get coherent counters
 and timestamps in every marking period to measure the performance. It
 can be implemented by using reserved bits in the protocol header, and
@@ -486,14 +497,14 @@ values which are dedicated to measurement". Thus:
   processed to add the marking in the header, and the stream could
   be measured and time-stamped during that process.
 
-We conclude that this is a Hybrid Type I method, having at least one
+Alternate-Marking is a Hybrid Type I method, having at least one
 characteristic of both Active and Passive Methods for a single stream
 of interest.
 
 ## IOAM
 
 In situ Operations, Administration, and Maintenance (IOAM), described
-in {{!RFC9197}}, consists of collecting operational and telemetry
+in {{?RFC9197}}, consists of collecting operational and telemetry
 information in the packet while the packet traverses a path between two
 points in the network. The term "in situ" refers to the fact that the
 OAM data is added to the data packets rather than being sent within
@@ -503,11 +514,11 @@ This method processes a user traffic stream and inserts "fields or
 values which are dedicated to measurement". Similarly to
 Alternate-Marking, IOAM also intends to have a minor effect in the
 network and the measured stream has unknown characteristics until it is
-processed. We conclude that IOAM can be portrayed as Hybrid Type I.
+processed. IOAM can thus be portrayed as Hybrid Type I.
 
 ## PDM
 
-In {{!RFC8250}}, an IPv6 Option Header for Performance and Diagnostic
+In {{?RFC8250}}, an IPv6 Option Header for Performance and Diagnostic
 Measurements (PDM) is described which, when added to the stream of
 interest at strategic interfaces, supports performance measurements.
 
@@ -517,7 +528,7 @@ in the title of this option). PDM also intends to have a minor effect
 in the network and the measured stream has unknown characteristics
 until it is processed. Note that if the packet MTU is exceeded after
 adding the header, the intent to have a minor effect will not be
-realized. We conclude that this is a Hybrid Type I method, having at
+realized. PDM is classified as a Hybrid Type I method, having at
 least one characteristic of both Active and Passive Methods for a
 single stream of interest.
 
@@ -533,18 +544,18 @@ beyond the IP layer. For example, {{Y.1731}} defines several different
 measurement methods that we would classify as follows:
 
 - Loss Measurement (LM) occasionally injects frames with a count of
-  previous frames since the last LM message. We conclude LM is
+  previous frames since the last LM message. Therefore, LM is classified as
   Hybrid Type I, because this method processes a user traffic stream
   and augments the stream of interest with frames having "fields
   which are dedicated to measurement".
 
 - Synthetic Loss Measurement (SLM) and Delay Measurement (DM)
   methods both inject dedicated measurement frames, so the "stream
-  of interest is generated as the basis of measurement". We
-  conclude that SLM and DM methods are Active Methods.
+  of interest is generated as the basis of measurement". Thus,
+  SLM and DM methods are classified as Active Methods.
 
-We also recognize the existence of alternate terminology used in OAM
-at layers other than IP. Readers are encouraged to consult {{!RFC6374}}
+There are other alternate terminology used in OAM
+at layers other than IP. Readers may refer to {{?RFC6374}}
 for MPLS Loss and Delay measurement terminology, for example.
 
 
@@ -567,8 +578,33 @@ This document has no IANA actions.
 
 --- back
 
+# Changes Since RFC 7799 {#sec-changes}
+
+The main changes since {{?RFC799}} are as follows:
+
+* Change the intended status
+* Update the discussion section
 
 # Acknowledgments
 {:numbered="false"}
 
 Thanks to Al Morton for working on {{!RFC7799}}.
+
+Acknowledgements from RFC 7799:
+: Thanks to Mike Ackermann for asking the right question, and for
+   several suggestions on terminology.  Brian Trammell provided key
+   terms and references for the Passive category, and suggested ways to
+   expand the Hybrid description and types.  Phil Eardley suggested some
+   hybrid scenarios for categorization as part of his review.  Tiziano
+   Ionta reviewed the document and suggested the classification for the
+   "coloring" Method of Measurement.  Nalini Elkins identified several
+   areas for clarification following her review.  Bill Jouris, Stenio
+   Fernandes, and Spencer Dawkins suggested several editorial
+   improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
+   Ackermann raised many key considerations in their Working Group Last
+   Call (WGLC) reviews, based on their broad measurement experience.
+
+{{?RFC7799} Author's:
+: Al Morton
+: AT&T Labs
+
