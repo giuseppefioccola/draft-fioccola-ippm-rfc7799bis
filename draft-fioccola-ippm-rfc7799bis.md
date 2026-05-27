@@ -1,5 +1,5 @@
 ---
-title: "Active and Passive Metrics and Methods (with Hybrid Types In-Between)"
+title: "Active, Passive, and Hybrid Metrics and Methods"
 abbrev: "Active, Passive, and Hybrid"
 category: bcp
 
@@ -585,7 +585,8 @@ This document has no IANA actions.
 
 The main changes since {{?RFC799}} are as follows:
 
-* Change the intended status
+* Changed the intended status from Informational to BCP
+* Updated title to reflect the current status of all methods
 * Update the discussion section
 
 # Acknowledgments
