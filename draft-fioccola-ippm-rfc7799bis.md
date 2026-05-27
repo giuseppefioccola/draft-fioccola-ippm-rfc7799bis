@@ -485,7 +485,7 @@ values which are dedicated to measurement". Thus:
 - The measured stream has unknown characteristics until it is
   processed to add the marking in the header, and the stream could
   be measured and time-stamped during that process.
-  
+
 We conclude that this is a Hybrid Type I method, having at least one
 characteristic of both Active and Passive Methods for a single stream
 of interest.
