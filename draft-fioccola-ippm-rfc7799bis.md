@@ -594,18 +594,18 @@ The main changes since {{?RFC799}} are as follows:
 Thanks to Al Morton for working on {{!RFC7799}}.
 
 Acknowledgements from RFC 7799:
-: Thanks to Mike Ackermann for asking the right question, and for
-   several suggestions on terminology.  Brian Trammell provided key
-   terms and references for the Passive category, and suggested ways to
-   expand the Hybrid description and types.  Phil Eardley suggested some
-   hybrid scenarios for categorization as part of his review.  Tiziano
-   Ionta reviewed the document and suggested the classification for the
-   "coloring" Method of Measurement.  Nalini Elkins identified several
-   areas for clarification following her review.  Bill Jouris, Stenio
-   Fernandes, and Spencer Dawkins suggested several editorial
-   improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
-   Ackermann raised many key considerations in their Working Group Last
-   Call (WGLC) reviews, based on their broad measurement experience.
+Thanks to Mike Ackermann for asking the right question, and for
+several suggestions on terminology.  Brian Trammell provided key
+terms and references for the Passive category, and suggested ways to
+expand the Hybrid description and types.  Phil Eardley suggested some
+hybrid scenarios for categorization as part of his review.  Tiziano
+Ionta reviewed the document and suggested the classification for the
+"coloring" Method of Measurement.  Nalini Elkins identified several
+areas for clarification following her review.  Bill Jouris, Stenio
+Fernandes, and Spencer Dawkins suggested several editorial
+improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
+Ackermann raised many key considerations in their Working Group Last
+Call (WGLC) reviews, based on their broad measurement experience.
 
 {{?RFC7799}} Author's:
 : Al Morton
