@@ -1,7 +1,7 @@
 ---
 title: "Active and Passive Metrics and Methods (with Hybrid Types In-Between)"
 abbrev: "Active, Passive, and Hybrid"
-category: BCP
+category: bcp
 
 docname: draft-fioccola-ippm-rfc7799bis-latest
 obsoletes: 7799
