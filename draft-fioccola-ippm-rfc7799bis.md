@@ -558,6 +558,9 @@ There are other alternate terminology used in OAM
 at layers other than IP. Readers may refer to {{?RFC6374}}
 for MPLS Loss and Delay measurement terminology, for example.
 
+# Operational Considerations
+
+TBC.
 
 # Security Considerations
 
