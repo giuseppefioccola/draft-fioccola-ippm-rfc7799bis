@@ -607,7 +607,7 @@ Acknowledgements from RFC 7799:
    Ackermann raised many key considerations in their Working Group Last
    Call (WGLC) reviews, based on their broad measurement experience.
 
-{{?RFC7799} Author's:
+{{?RFC7799}} Author's:
 : Al Morton
 : AT&T Labs
 
