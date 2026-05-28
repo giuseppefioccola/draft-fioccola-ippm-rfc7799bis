@@ -1,0 +1,145 @@
+{
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2026-05-28T02:30:04.043488+00:00",
+  "repo": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
+  "labels": [
+    {
+      "name": "bug",
+      "description": "Something isn't working",
+      "color": "d73a4a"
+    },
+    {
+      "name": "documentation",
+      "description": "Improvements or additions to documentation",
+      "color": "0075ca"
+    },
+    {
+      "name": "duplicate",
+      "description": "This issue or pull request already exists",
+      "color": "cfd3d7"
+    },
+    {
+      "name": "enhancement",
+      "description": "New feature or request",
+      "color": "a2eeef"
+    },
+    {
+      "name": "good first issue",
+      "description": "Good for newcomers",
+      "color": "7057ff"
+    },
+    {
+      "name": "help wanted",
+      "description": "Extra attention is needed",
+      "color": "008672"
+    },
+    {
+      "name": "invalid",
+      "description": "This doesn't seem right",
+      "color": "e4e669"
+    },
+    {
+      "name": "question",
+      "description": "Further information is requested",
+      "color": "d876e3"
+    },
+    {
+      "name": "wontfix",
+      "description": "This will not be worked on",
+      "color": "ffffff"
+    }
+  ],
+  "issues": [],
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOSpX_gs7f3SHk",
+      "title": "Med's initial review",
+      "url": "https://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/pull/1",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-27T14:35:47Z",
+      "updatedAt": "2026-05-27T15:22:48Z",
+      "baseRepository": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
+      "baseRefName": "main",
+      "baseRefOid": "be24e00aed9c5725c4421286c42c4bb5670e9e84",
+      "headRepository": "boucadair/draft-fioccola-ippm-rfc7799bis",
+      "headRefName": "patch-1",
+      "headRefOid": "29a5f3b0720bbd6f6ccd94a43255d8b608be7681",
+      "closedAt": "2026-05-27T15:22:48Z",
+      "mergedAt": "2026-05-27T15:22:47Z",
+      "mergedBy": "giuseppefioccola",
+      "mergeCommit": {
+        "oid": "349cda7ef5258b29413a59ef58628c245cb9883e"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 2,
+      "id": "PR_kwDOSpX_gs7f5a2F",
+      "title": "Revert to Title suggested by Giueseppe",
+      "url": "https://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/pull/2",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Your title is indeed better. Reverted that change.",
+      "createdAt": "2026-05-27T16:06:18Z",
+      "updatedAt": "2026-05-27T16:13:18Z",
+      "baseRepository": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
+      "baseRefName": "main",
+      "baseRefOid": "5f646af178af1f56f7fc55c51b62f27fcf392303",
+      "headRepository": "boucadair/draft-fioccola-ippm-rfc7799bis",
+      "headRefName": "patch-2",
+      "headRefOid": "a7c7a09a9c7d4a15e8af02ccefafa224fe1161f0",
+      "closedAt": "2026-05-27T16:13:00Z",
+      "mergedAt": "2026-05-27T16:13:00Z",
+      "mergedBy": "giuseppefioccola",
+      "mergeCommit": {
+        "oid": "176a2844146c3969b164fd2d41db7c872f99ecc0"
+      },
+      "comments": [
+        {
+          "author": "giuseppefioccola",
+          "authorAssociation": "OWNER",
+          "body": "Ok",
+          "createdAt": "2026-05-27T16:13:18Z",
+          "updatedAt": "2026-05-27T16:13:18Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDOSpX_gs7f5lC6",
+      "title": "track diff vs RFC7799",
+      "url": "https://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/pull/3",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-05-27T16:13:42Z",
+      "updatedAt": "2026-05-27T16:13:42Z",
+      "baseRepository": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
+      "baseRefName": "main",
+      "baseRefOid": "176a2844146c3969b164fd2d41db7c872f99ecc0",
+      "headRepository": "boucadair/draft-fioccola-ippm-rfc7799bis",
+      "headRefName": "patch-3",
+      "headRefOid": "91745561a78a4c827febfe63786a814129044c14",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": []
+    }
+  ]
+}
