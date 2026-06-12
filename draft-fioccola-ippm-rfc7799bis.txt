@@ -4,9 +4,9 @@
 
 IP Performance Measurement                                   G. Fioccola
 Internet-Draft                                       Huawei Technologies
-Obsoletes: 7799 (if approved)                                  A. Morton
-Intended status: Best Current Practice                         AT&T Labs
-Expires: 14 December 2026                                   12 June 2026
+Obsoletes: 7799 (if approved)                               12 June 2026
+Intended status: Best Current Practice                                  
+Expires: 14 December 2026
 
 
             Active, Passive, and Hybrid Metrics and Methods
@@ -101,7 +101,7 @@ Table of Contents
      10.2.  Informative References
    Appendix A.  Changes Since RFC 7799
    Acknowledgments
-   Authors' Addresses
+   Author's Address
 
 1.  Introduction
 
@@ -769,12 +769,8 @@ Acknowledgments
 
    [RFC7799] Author: Al Morton, AT&T Labs
 
-Authors' Addresses
+Author's Address
 
    Giuseppe Fioccola
    Huawei Technologies
    Email: giuseppe.fioccola@huawei.com
-
-
-   Al Morton
-   AT&T Labs
