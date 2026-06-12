@@ -6,7 +6,7 @@ IP Performance Measurement                                   G. Fioccola
 Internet-Draft                                       Huawei Technologies
 Obsoletes: 7799 (if approved)                                  A. Morton
 Intended status: Best Current Practice                         AT&T Labs
-Expires: 28 November 2026                                    27 May 2026
+Expires: 14 December 2026                                   12 June 2026
 
 
             Active, Passive, and Hybrid Metrics and Methods
@@ -14,12 +14,12 @@ Expires: 28 November 2026                                    27 May 2026
 
 Abstract
 
-   This memo provides clear definitions for Active and Passive
+   This memo provides clear definitions for Active, Passive and Hybrid
    performance assessment.  The construction of Metrics and Methods can
-   be described as either "Active" or "Passive".  Some methods may use a
-   subset of both Active and Passive attributes, and we refer to these
-   as "Hybrid Methods".  This memo also describes multiple dimensions to
-   help evaluate new methods as they emerge.
+   be described as either "Active" or "Passive".  Some methods use a
+   subset of both Active and Passive attributes, and they can be
+   referred to as "Hybrid".  This memo also describes multiple
+   dimensions to help evaluate new methods as they emerge.
 
    This memo obsoletes RFC 7799.
 
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 28 November 2026.
+   This Internet-Draft will expire on 14 December 2026.
 
 Copyright Notice
 
@@ -510,11 +510,11 @@ Table of Contents
 
 5.2.  Alternate-Marking
 
-   [RFC9341] defines a performance monitoring technique, called
-   Alternate-Marking, that consists of marking the packets in order to
-   divide the packet flow into batches, that are used to get coherent
-   counters and timestamps in every marking period to measure the
-   performance.  It can be implemented by using reserved bits in the
+   [RFC9341] and [RFC9342] define a performance monitoring technique,
+   called Alternate-Marking, that consists of marking the packets in
+   order to divide the packet flow into batches, that are used to get
+   coherent counters and timestamps in every marking period to measure
+   the performance.  It can be implemented by using reserved bits in the
    protocol header, and the change in value of these marking bits at the
    domain edges (and not along the path) is formally considered a
    modification of the stream of interest.
@@ -592,7 +592,11 @@ Table of Contents
 
 7.  Operational Considerations
 
-   TBC.
+   This document has no Operational Considerations.
+
+   It is expected that each document that describes a measurement method
+   will include a specific Operational Considerations sections to
+   address the Operations and Management aspects.
 
 8.  Security Considerations
 
@@ -720,6 +724,11 @@ Table of Contents
               DOI 10.17487/RFC9341, December 2022,
               <https://www.rfc-editor.org/rfc/rfc9341>.
 
+   [RFC9342]  Fioccola, G., Ed., Cociglio, M., Sapio, A., Sisto, R., and
+              T. Zhou, "Clustered Alternate-Marking Method", RFC 9342,
+              DOI 10.17487/RFC9342, December 2022,
+              <https://www.rfc-editor.org/rfc/rfc9342>.
+
    [Y.1540]   ITU-T, "Internet protocol data communication service - IP
               packet transfer and availability performance parameters",
               March 2011,
@@ -758,9 +767,7 @@ Acknowledgments
    key considerations in their Working Group Last Call (WGLC) reviews,
    based on their broad measurement experience.
 
-   [RFC7799] Author's:  Al Morton
-
-      AT&T Labs
+   [RFC7799] Author: Al Morton, AT&T Labs
 
 Authors' Addresses
 
