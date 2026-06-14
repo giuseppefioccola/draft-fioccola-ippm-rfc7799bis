@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-11T02:52:05.722451+00:00",
+  "timestamp": "2026-06-14T02:53:00.407114+00:00",
   "repo": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
   "labels": [
     {
@@ -120,24 +120,26 @@
       "id": "PR_kwDOSpX_gs7f5lC6",
       "title": "track diff vs RFC7799",
       "url": "https://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2026-05-27T16:13:42Z",
-      "updatedAt": "2026-05-27T16:13:42Z",
+      "updatedAt": "2026-06-12T09:02:00Z",
       "baseRepository": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
       "baseRefName": "main",
       "baseRefOid": "176a2844146c3969b164fd2d41db7c872f99ecc0",
       "headRepository": "boucadair/draft-fioccola-ippm-rfc7799bis",
       "headRefName": "patch-3",
       "headRefOid": "91745561a78a4c827febfe63786a814129044c14",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2026-06-12T09:01:59Z",
+      "mergedAt": "2026-06-12T09:01:59Z",
+      "mergedBy": "giuseppefioccola",
+      "mergeCommit": {
+        "oid": "392dde37076e9667cd19e220bf49e802dde7c653"
+      },
       "comments": [],
       "reviews": []
     }
