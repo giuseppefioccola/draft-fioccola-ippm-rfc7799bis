@@ -49,7 +49,12 @@ informative:
     title: ITU-T, Operation, administration and management (OAM) functions and mechanisms for Ethernet-based networks
     date: August 2015
     target: https://www.itu.int/rec/T-REC-G.8013-201508-I/en
-
+  PAM:
+    author:
+      organization: RIPE
+    title: PAM 2001
+    date: 2001
+    target: https://www.ripe.net/ripe/meetings/pam-2001
 
 --- abstract
 
@@ -71,8 +76,7 @@ The adjectives "Active" and "Passive" have been used for many years
 to distinguish between two different classes of Internet performance
 assessment. The first Passive and Active Measurement (PAM)
 Conference was held in 2000, but the earliest proceedings available
-online are from the second PAM conference in 2001
-(https://www.ripe.net/ripe/meetings/pam-2001).
+online are from the second PAM conference in 2001 {{PAM}}.
 
 The notions of "Active", "Passive", and "Hybrid" are well-established.
 In general:
@@ -585,7 +589,7 @@ This document has no IANA actions.
 
 # Changes Since RFC 7799 {#sec-changes}
 
-The main changes since {{?RFC799}} are as follows:
+The main changes since {{?RFC7799}} are as follows:
 
 * Changed the intended status from Informational to BCP
 * Updated title to reflect the current status of all methods
@@ -594,10 +598,10 @@ The main changes since {{?RFC799}} are as follows:
 # Acknowledgments
 {:numbered="false"}
 
-Thanks to Al Morton for working on {{!RFC7799}}.
+Thanks to Al Morton for working on {{?RFC7799}}.
 
 Acknowledgements from RFC 7799:
-Thanks to Mike Ackermann for asking the right question, and for
+: Thanks to Mike Ackermann for asking the right question, and for
 several suggestions on terminology.  Brian Trammell provided key
 terms and references for the Passive category, and suggested ways to
 expand the Hybrid description and types.  Phil Eardley suggested some
@@ -610,4 +614,5 @@ improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
 Ackermann raised many key considerations in their Working Group Last
 Call (WGLC) reviews, based on their broad measurement experience.
 
-{{?RFC7799}} Author: Al Morton, AT&T Labs
+{{?RFC7799}} Author:
+: Al Morton, AT&T Labs
