@@ -4,9 +4,9 @@
 
 IP Performance Measurement                                   G. Fioccola
 Internet-Draft                                       Huawei Technologies
-Obsoletes: 7799 (if approved)                               12 June 2026
+Obsoletes: 7799 (if approved)                               16 June 2026
 Intended status: Best Current Practice                                  
-Expires: 14 December 2026
+Expires: 18 December 2026
 
 
             Active, Passive, and Hybrid Metrics and Methods
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 December 2026.
+   This Internet-Draft will expire on 18 December 2026.
 
 Copyright Notice
 
@@ -109,8 +109,7 @@ Table of Contents
    to distinguish between two different classes of Internet performance
    assessment.  The first Passive and Active Measurement (PAM)
    Conference was held in 2000, but the earliest proceedings available
-   online are from the second PAM conference in 2001
-   (https://www.ripe.net/ripe/meetings/pam-2001).
+   online are from the second PAM conference in 2001 [PAM].
 
    The notions of "Active", "Passive", and "Hybrid" are well-
    established.  In general:
@@ -663,10 +662,6 @@ Table of Contents
               DOI 10.17487/RFC7594, September 2015,
               <https://www.rfc-editor.org/rfc/rfc7594>.
 
-   [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
-              Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
-              May 2016, <https://www.rfc-editor.org/rfc/rfc7799>.
-
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
@@ -678,6 +673,9 @@ Table of Contents
               Internet-Draft, draft-ietf-opsawg-oam-characterization-17,
               28 January 2026, <https://datatracker.ietf.org/doc/html/
               draft-ietf-opsawg-oam-characterization-17>.
+
+   [PAM]      RIPE, "PAM 2001", 2001,
+              <https://www.ripe.net/ripe/meetings/pam-2001>.
 
    [RFC4656]  Shalunov, S., Teitelbaum, B., Karp, A., Boote, J., and M.
               Zekauskas, "A One-way Active Measurement Protocol
@@ -694,9 +692,9 @@ Table of Contents
               DOI 10.17487/RFC6374, September 2011,
               <https://www.rfc-editor.org/rfc/rfc6374>.
 
-   [RFC799]   Mills, D., "Internet name domains", RFC 799,
-              DOI 10.17487/RFC0799, September 1981,
-              <https://www.rfc-editor.org/rfc/rfc799>.
+   [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
+              Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
+              May 2016, <https://www.rfc-editor.org/rfc/rfc7799>.
 
    [RFC8250]  Elkins, N., Hamilton, R., and M. Ackermann, "IPv6
               Performance and Diagnostic Metrics (PDM) Destination
@@ -741,7 +739,7 @@ Table of Contents
 
 Appendix A.  Changes Since RFC 7799
 
-   The main changes since [RFC799] are as follows:
+   The main changes since [RFC7799] are as follows:
 
    *  Changed the intended status from Informational to BCP
 
@@ -753,21 +751,22 @@ Acknowledgments
 
    Thanks to Al Morton for working on [RFC7799].
 
-   Acknowledgements from RFC 7799: Thanks to Mike Ackermann for asking
-   the right question, and for several suggestions on terminology.
-   Brian Trammell provided key terms and references for the Passive
-   category, and suggested ways to expand the Hybrid description and
-   types.  Phil Eardley suggested some hybrid scenarios for
-   categorization as part of his review.  Tiziano Ionta reviewed the
-   document and suggested the classification for the "coloring" Method
-   of Measurement.  Nalini Elkins identified several areas for
-   clarification following her review.  Bill Jouris, Stenio Fernandes,
-   and Spencer Dawkins suggested several editorial improvements.  Tal
-   Mizrahi, Joachim Fabini, Greg Mirsky, and Mike Ackermann raised many
-   key considerations in their Working Group Last Call (WGLC) reviews,
-   based on their broad measurement experience.
+   Acknowledgements from RFC 7799:  Thanks to Mike Ackermann for asking
+      the right question, and for several suggestions on terminology.
+      Brian Trammell provided key terms and references for the Passive
+      category, and suggested ways to expand the Hybrid description and
+      types.  Phil Eardley suggested some hybrid scenarios for
+      categorization as part of his review.  Tiziano Ionta reviewed the
+      document and suggested the classification for the "coloring"
+      Method of Measurement.  Nalini Elkins identified several areas for
+      clarification following her review.  Bill Jouris, Stenio
+      Fernandes, and Spencer Dawkins suggested several editorial
+      improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
+      Ackermann raised many key considerations in their Working Group
+      Last Call (WGLC) reviews, based on their broad measurement
+      experience.
 
-   [RFC7799] Author: Al Morton, AT&T Labs
+   [RFC7799] Author:  Al Morton, AT&T Labs
 
 Author's Address
 
