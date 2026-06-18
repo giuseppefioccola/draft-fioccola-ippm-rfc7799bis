@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-16T02:58:49.413132+00:00",
+  "timestamp": "2026-06-18T02:50:28.606343+00:00",
   "repo": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
   "labels": [
     {
@@ -139,6 +139,34 @@
       "mergedBy": "giuseppefioccola",
       "mergeCommit": {
         "oid": "392dde37076e9667cd19e220bf49e802dde7c653"
+      },
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOSpX_gs7m-0NJ",
+      "title": "fix broken reference",
+      "url": "https://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/pull/4",
+      "state": "MERGED",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2026-06-16T11:36:07Z",
+      "updatedAt": "2026-06-16T15:29:48Z",
+      "baseRepository": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
+      "baseRefName": "main",
+      "baseRefOid": "7f4d6f19c77adfe4120624fbdcfa107e274f9972",
+      "headRepository": "boucadair/draft-fioccola-ippm-rfc7799bis",
+      "headRefName": "patch-4",
+      "headRefOid": "8c4795ae0c8260ba6b020173ed9e02320f8a5b16",
+      "closedAt": "2026-06-16T15:29:48Z",
+      "mergedAt": "2026-06-16T15:29:47Z",
+      "mergedBy": "giuseppefioccola",
+      "mergeCommit": {
+        "oid": "a5b15430d07b39e67f0c577945c61f2d1474ec68"
       },
       "comments": [],
       "reviews": []
