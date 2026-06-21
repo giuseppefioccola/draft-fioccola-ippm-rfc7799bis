@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-18T02:50:28.606343+00:00",
+  "timestamp": "2026-06-21T02:56:42.421451+00:00",
   "repo": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
   "labels": [
     {
@@ -49,7 +49,24 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 5,
+      "id": "I_kwDOSpX_gs8AAAABGCL4dA",
+      "title": "highlight these definitions are normatvely used such as in 8911",
+      "url": "https://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/issues/5",
+      "state": "OPEN",
+      "author": "boucadair",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "* https://datatracker.ietf.org/doc/html/rfc8911#table-2 \n* https://www.iana.org/assignments/performance-metrics/performance-metrics.xhtml\n",
+      "createdAt": "2026-06-19T10:23:05Z",
+      "updatedAt": "2026-06-19T10:23:05Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": [
     {
       "number": 1,
