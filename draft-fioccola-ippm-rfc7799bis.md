@@ -109,11 +109,15 @@ reference to position measurement methods and establish a structured
 approach to capture measurement method characteristics. Typically, a
 measurement method is first presented by indicating whether it belongs
 to Active/Passive/Hybrid category defined in {{?RFC7799}}.
+Many documents informatively refers to {{?RFC7799}}, however the
+definitions of {{?RFC7799}} are also normatively used in {{?RFC8911}}.
 
-This memo obsoletes {{?RFC7799}}. The description of Metrics
-and Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
+This memo obsoletes {{?RFC7799}}. The description of Metrics and
+Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
 to {{?RFC7799}}, while the discussion about the existing methods has
-been updated. Main changes are listed in {{sec-changes}}.
+been updated. No new additional definition has been introduced in this
+document compared to {{?RFC7799}}. Main changes are listed in
+{{sec-changes}}.
 
 ## Conventions and Definitions
 
@@ -493,7 +497,7 @@ values which are dedicated to measurement". Thus:
 
 - The method intends to have a minor effect on the measured stream
   and other streams in the network. There are conditions where this
-  intent may not be realized.
+  intent may not be realized and it depends on the network deployment.
 
 - The measured stream has unknown characteristics until it is
   processed to add the marking in the header, and the stream could
@@ -562,19 +566,29 @@ for MPLS Loss and Delay measurement terminology, for example.
 
 # Operational Considerations
 
-This document has no Operational Considerations.
+In general, any new metric or method implies the development of the
+Operations and Management practices and requirements, as highlighted in
+{{?I-D.ietf-opsawg-rfc5706bis}}.
+
+The Operational aspects are different depending if the method is
+Active, Passive or Hybrid.
 
 It is expected that each document that describes a measurement method
-will include a specific Operational Considerations sections to address
-the Operations and Management aspects.
+include a specific Operational Considerations section to address
+the operational and manageability aspects.
 
 # Security Considerations
 
 When considering the security and privacy of those involved in
 measurement or those whose traffic is measured, there is sensitive
 information communicated and observed at observation and measurement
-points described above, and protocol issues to consider. We refer
-the reader to the security and privacy considerations described in
+points described above, and protocol issues to consider.
+
+Each document that describes a measurement method must include a
+specific Security Considerations section to explore the privacy and
+security risks associated with the new metric or method.
+
+We refer the reader to the security and privacy considerations described in
 the Large-Scale Measurement of Broadband Performance (LMAP) Framework
 {{!RFC7594}}, which covers Active and Passive measurement techniques
 and supporting material on measurement context.
@@ -594,6 +608,7 @@ The main changes since {{?RFC7799}} are as follows:
 * Changed the intended status from Informational to BCP
 * Updated title to reflect the current status of all methods
 * Update the discussion section
+* Extend the examples to include recent methods
 
 # Acknowledgments
 {:numbered="false"}
