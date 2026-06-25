@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-06-21T02:56:42.421451+00:00",
+  "timestamp": "2026-06-25T02:36:39.136956+00:00",
   "repo": "giuseppefioccola/draft-fioccola-ippm-rfc7799bis",
   "labels": [
     {
@@ -55,16 +55,31 @@
       "id": "I_kwDOSpX_gs8AAAABGCL4dA",
       "title": "highlight these definitions are normatvely used such as in 8911",
       "url": "https://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/issues/5",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "boucadair",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "* https://datatracker.ietf.org/doc/html/rfc8911#table-2 \n* https://www.iana.org/assignments/performance-metrics/performance-metrics.xhtml\n",
       "createdAt": "2026-06-19T10:23:05Z",
-      "updatedAt": "2026-06-19T10:23:05Z",
-      "closedAt": null,
-      "comments": []
+      "updatedAt": "2026-06-24T16:57:52Z",
+      "closedAt": "2026-06-24T16:57:52Z",
+      "comments": [
+        {
+          "author": "giuseppefioccola",
+          "authorAssociation": "OWNER",
+          "body": "Just addressed in the new revision.",
+          "createdAt": "2026-06-24T15:59:57Z",
+          "updatedAt": "2026-06-24T15:59:57Z"
+        },
+        {
+          "author": "boucadair",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "Thanks @giuseppefioccola \n\nhttps://github.com/giuseppefioccola/draft-fioccola-ippm-rfc7799bis/commit/35684b1d357da4958184c8de5d585ebb0ffe33eb",
+          "createdAt": "2026-06-24T16:57:52Z",
+          "updatedAt": "2026-06-24T16:57:52Z"
+        }
+      ]
     }
   ],
   "pulls": [
