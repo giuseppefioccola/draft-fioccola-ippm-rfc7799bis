@@ -4,9 +4,9 @@
 
 IP Performance Measurement                                   G. Fioccola
 Internet-Draft                                       Huawei Technologies
-Obsoletes: 7799 (if approved)                               24 June 2026
+Obsoletes: 7799 (if approved)                                2 July 2026
 Intended status: Best Current Practice                                  
-Expires: 26 December 2026
+Expires: 3 January 2027
 
 
             Active, Passive, and Hybrid Metrics and Methods
@@ -56,7 +56,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 26 December 2026.
+   This Internet-Draft will expire on 3 January 2027.
 
 Copyright Notice
 
@@ -143,7 +143,8 @@ Table of Contents
    measurement method is first presented by indicating whether it
    belongs to Active/Passive/Hybrid category defined in [RFC7799].  Many
    documents informatively refers to [RFC7799], however the definitions
-   of [RFC7799] are also normatively used in [RFC8911].
+   of [RFC7799] are also normatively used in some cases, like in
+   [RFC8911].
 
    This memo obsoletes [RFC7799].  The description of Metrics and
    Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
@@ -571,7 +572,7 @@ Table of Contents
 
 6.  Discussion of OAM Methods
 
-   [OAM] considers some common qualifiers and modifiers that are
+   [RFC10014] considers some common qualifiers and modifiers that are
    prepended, within the context of packet networks, to the OAM
    abbreviation and lays out guidelines for their use in IETF documents.
 
@@ -678,6 +679,10 @@ Table of Contents
               DOI 10.17487/RFC7594, September 2015,
               <https://www.rfc-editor.org/rfc/rfc7594>.
 
+   [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
+              Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
+              May 2016, <https://www.rfc-editor.org/rfc/rfc7799>.
+
    [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
               2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
               May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
@@ -688,15 +693,9 @@ Table of Contents
               Claise, B., Clarke, J., Farrel, A., Barguil, S.,
               Pignataro, C., and R. Chen, "Guidelines for Considering
               Operations and Management in IETF Specifications", Work in
-              Progress, Internet-Draft, draft-ietf-opsawg-rfc5706bis-04,
-              15 March 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-opsawg-rfc5706bis-04>.
-
-   [OAM]      Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
-              Characterizing the Term "OAM"", Work in Progress,
-              Internet-Draft, draft-ietf-opsawg-oam-characterization-17,
-              28 January 2026, <https://datatracker.ietf.org/doc/html/
-              draft-ietf-opsawg-oam-characterization-17>.
+              Progress, Internet-Draft, draft-ietf-opsawg-rfc5706bis-05,
+              26 June 2026, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-opsawg-rfc5706bis-05>.
 
    [PAM]      RIPE, "PAM 2001", 2001,
               <https://www.ripe.net/ripe/meetings/pam-2001>.
@@ -715,10 +714,6 @@ Table of Contents
               Measurement for MPLS Networks", RFC 6374,
               DOI 10.17487/RFC6374, September 2011,
               <https://www.rfc-editor.org/rfc/rfc6374>.
-
-   [RFC7799]  Morton, A., "Active and Passive Metrics and Methods (with
-              Hybrid Types In-Between)", RFC 7799, DOI 10.17487/RFC7799,
-              May 2016, <https://www.rfc-editor.org/rfc/rfc7799>.
 
    [RFC8250]  Elkins, N., Hamilton, R., and M. Ackermann, "IPv6
               Performance and Diagnostic Metrics (PDM) Destination
@@ -756,6 +751,11 @@ Table of Contents
               DOI 10.17487/RFC9342, December 2022,
               <https://www.rfc-editor.org/rfc/rfc9342>.
 
+   [RFC10014] Pignataro, C., Farrel, A., and T. Mizrahi, "Guidelines for
+              Characterizing the Term "OAM"", BCP 161, RFC 10014,
+              DOI 10.17487/RFC10014, June 2026,
+              <https://www.rfc-editor.org/rfc/rfc10014>.
+
    [Y.1540]   ITU-T, "Internet protocol data communication service - IP
               packet transfer and availability performance parameters",
               March 2011,
@@ -779,6 +779,10 @@ Appendix A.  Changes Since RFC 7799
    *  Extend the examples to include recent methods
 
 Acknowledgments
+
+   Thanks to Mohamed Boucadair for the initial proposal to change the
+   status of [RFC7799] to BCP, and also for the valuable support and
+   detailed review of this document.
 
    Thanks to Al Morton for working on [RFC7799].
 
