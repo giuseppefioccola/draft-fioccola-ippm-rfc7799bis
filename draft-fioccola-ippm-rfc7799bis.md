@@ -36,7 +36,6 @@ author:
 normative:
 
 informative:
-  OAM: I-D.ietf-opsawg-oam-characterization
   Y.1540:
     author:
       organization: ITU-T
@@ -104,19 +103,20 @@ and especially the Internet Engineering Task Force (IETF). This memo
 also describes the combination of fundamental Active and Passive
 categories that are called Hybrid Methods and Metrics.
 
-The classification guidelines set in {{?RFC7799}} are used as a
+The classification guidelines set in {{!RFC7799}} are used as a
 reference to position measurement methods and establish a structured
 approach to capture measurement method characteristics. Typically, a
 measurement method is first presented by indicating whether it belongs
-to Active/Passive/Hybrid category defined in {{?RFC7799}}.
-Many documents informatively refers to {{?RFC7799}}, however the
-definitions of {{?RFC7799}} are also normatively used in {{?RFC8911}}.
+to Active/Passive/Hybrid category defined in {{!RFC7799}}.
+Many documents informatively refers to {{!RFC7799}}, however the
+definitions of {{!RFC7799}} are also normatively used in some cases,
+like in {{?RFC8911}}.
 
-This memo obsoletes {{?RFC7799}}. The description of Metrics and
+This memo obsoletes {{!RFC7799}}. The description of Metrics and
 Methods as "Active" or "Passive" and "Hybrid" is unchanged compared
-to {{?RFC7799}}, while the discussion about the existing methods has
+to {{!RFC7799}}, while the discussion about the existing methods has
 been updated. No new additional definition has been introduced in this
-document compared to {{?RFC7799}}. Main changes are listed in
+document compared to {{!RFC7799}}. Main changes are listed in
 {{sec-changes}}.
 
 ## Conventions and Definitions
@@ -541,7 +541,7 @@ single stream of interest.
 
 # Discussion of OAM Methods
 
-{{OAM}} considers some common qualifiers and modifiers that are
+{{?RFC10014}} considers some common qualifiers and modifiers that are
 prepended, within the context of packet networks, to the OAM
 abbreviation and lays out guidelines for their use in IETF documents.
 
@@ -603,7 +603,7 @@ This document has no IANA actions.
 
 # Changes Since RFC 7799 {#sec-changes}
 
-The main changes since {{?RFC7799}} are as follows:
+The main changes since {{!RFC7799}} are as follows:
 
 * Changed the intended status from Informational to BCP
 * Updated title to reflect the current status of all methods
@@ -613,7 +613,11 @@ The main changes since {{?RFC7799}} are as follows:
 # Acknowledgments
 {:numbered="false"}
 
-Thanks to Al Morton for working on {{?RFC7799}}.
+Thanks to Mohamed Boucadair for the initial proposal to change the
+status of {{!RFC7799}} to BCP, and also for the valuable support and
+detailed review of this document.
+
+Thanks to Al Morton for working on {{!RFC7799}}.
 
 Acknowledgements from RFC 7799:
 : Thanks to Mike Ackermann for asking the right question, and for
@@ -629,5 +633,5 @@ improvements.  Tal Mizrahi, Joachim Fabini, Greg Mirsky, and Mike
 Ackermann raised many key considerations in their Working Group Last
 Call (WGLC) reviews, based on their broad measurement experience.
 
-{{?RFC7799}} Author:
+{{!RFC7799}} Author:
 : Al Morton, AT&T Labs
